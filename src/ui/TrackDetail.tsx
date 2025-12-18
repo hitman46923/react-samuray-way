@@ -21,7 +21,6 @@ export function TrackDetail({trackId}:Props) {
 
     return (
         <div>
-            <h1>Music</h1>
             <h2>Details</h2>
             {!selectedTrack && !trackId && "Track is not selected."}
             {!selectedTrack && trackId && "Loading..."}
