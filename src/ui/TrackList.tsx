@@ -20,7 +20,7 @@ const {tracks} = useTracks();
 
 
 
-if (tracks === null ) {
+if (!tracks) {
     return  (
         <h3>Loading..</h3>
     )
