@@ -48,9 +48,8 @@ const prepareHeaders = () => {
 
 export const getTrack = (trackId: string) => {
     const promise:Promise<GetTrackDetailsOutput> = fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks/" + trackId, {
-        headers: {
-            "api-key":"apiKey"
-        },
+        headers: prepareHeaders()
+
     }).then((res) => res.json())
 
     return promise
@@ -59,9 +58,8 @@ export const getTrack = (trackId: string) => {
 
 export const getTracks = () => {
     const promise:Promise<GetTracksOutput> = fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks/", {
-        headers: {
-            "api-key": "apiKey"
-        },
+        headers: prepareHeaders()
+
     }).then((res) => res.json())
     return promise
 }
